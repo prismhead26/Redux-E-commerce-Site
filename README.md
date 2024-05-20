@@ -42,9 +42,11 @@ Step 7: After the "VITE v5.2.10 ready in 267 ms" appears in the console, open th
 ## Links
 
 Screenshots:
-![searchPage](./Assets/images/searchPage.png)
+![Signup](./assets/gifs/signup.gif)
 
-![savePage](./Assets/images/savedBooks.png)
+![Home](./assets/gifs/home.gif)
+
+![Checkout](./assets/gifs/checkout.gif)
 
 Netlify link:
 [Netlify Link]()
@@ -81,6 +83,10 @@ Javascript variables, layered destructuring, hooks, reducers, mutations, queries
 ## Test Instructions:
 
 For testing and debugging, the application logs requests and errors in the console. Unit testing not configured. For further debugging feel free to check the sources in Dev Tools for front-end and JavaScript Debug Terminal for backend.
+
+And be aware there is a current issue in the chrome dev tools in regards to blocked cookies with Stripe API. It is completely normal and will not affect the application. For Further reading [Cookie Error](https://support.stripe.com/questions/chrome-third-party-cookie-warnings-for-websites-using-stripe-js).
+
+![Error](./assets/images/stripe_error.png)
 
 ## License:
 
