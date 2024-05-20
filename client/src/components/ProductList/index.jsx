@@ -10,13 +10,11 @@ import spinner from '../../assets/spinner.gif';
 import { useSelector, useDispatch } from 'react-redux';
 
 function ProductList() {
-  // const [state, dispatch] = useStoreContext();
-  // const state = useSelector((state) => state);
+  // set up dispatch function using useDispatch from react-redux
   const dispatch = useDispatch();
 
-  // const { currentCategory } = state;
+  // useSelector to get the current global state object
   const currentCategory = useSelector((state) => state.currentCategory);
-  // const state = useSelector((state) => state);
   const products = useSelector((state) => state.products);
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);

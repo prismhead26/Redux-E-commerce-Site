@@ -17,8 +17,7 @@ import spinner from '../assets/spinner.gif';
 import { useSelector, useDispatch } from 'react-redux';
 
 function Detail() {
-  // const [state, dispatch] = useStoreContext();
-  // const state = useSelector((state) => state);
+  // set up dispatch function using useDispatch from react-redux
   const dispatch = useDispatch();
 
   const { id } = useParams();
@@ -27,7 +26,7 @@ function Detail() {
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
-  // const { products, cart } = state;
+  // useSelector to get the current global state object
   const products = useSelector((state) => state.products);
   const cart = useSelector((state) => state.cart);
 

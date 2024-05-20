@@ -8,7 +8,8 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Nav from './components/Nav';
-// import { StoreProvider } from './utils/GlobalState';
+
+// import the Provider from react-redux and the store we created to connect the Redux store to our application
 import { Provider } from 'react-redux';
 import store from './utils/store';
 

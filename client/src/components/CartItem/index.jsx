@@ -5,8 +5,7 @@ import { idbPromise } from "../../utils/helpers";
 import { useDispatch } from 'react-redux';
 
 const CartItem = ({ item }) => {
-
-  // const [, dispatch] = useStoreContext();
+  // set up dispatch function using useDispatch from react-redux
   const dispatch = useDispatch();
   
   const removeFromCart = item => {
