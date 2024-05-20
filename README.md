@@ -48,8 +48,8 @@ Screenshots:
 
 ![Checkout](./assets/gifs/checkout.gif)
 
-Netlify link:
-[Netlify Link]()
+Render link:
+[Render Link](https://redux-e-commerce-site.onrender.com/)
 
 ## Features:
 
