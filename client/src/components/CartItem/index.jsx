@@ -8,7 +8,7 @@ const CartItem = ({ item }) => {
 
   // const [, dispatch] = useStoreContext();
   const dispatch = useDispatch();
-
+  
   const removeFromCart = item => {
     dispatch({
       type: REMOVE_FROM_CART,

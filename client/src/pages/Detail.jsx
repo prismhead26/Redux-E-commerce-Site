@@ -18,7 +18,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 function Detail() {
   // const [state, dispatch] = useStoreContext();
-  const state = useSelector((state) => state);
+  // const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const { id } = useParams();
@@ -27,7 +27,9 @@ function Detail() {
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
-  const { products, cart } = state;
+  // const { products, cart } = state;
+  const products = useSelector((state) => state.products);
+  const cart = useSelector((state) => state.cart);
 
   useEffect(() => {
     // already in global store

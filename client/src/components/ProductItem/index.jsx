@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 function ProductItem(item) {
   // const [state, dispatch] = useStoreContext();
-  const state = useSelector((state) => state);
+  // const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const {
@@ -19,7 +19,8 @@ function ProductItem(item) {
     quantity
   } = item;
 
-  const { cart } = state
+  // const { cart } = state
+  const cart = useSelector((state) => state.cart);
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === _id)

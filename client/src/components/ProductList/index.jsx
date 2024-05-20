@@ -11,10 +11,13 @@ import { useSelector, useDispatch } from 'react-redux';
 
 function ProductList() {
   // const [state, dispatch] = useStoreContext();
-  const state = useSelector((state) => state);
+  // const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  const { currentCategory } = state;
+  // const { currentCategory } = state;
+  const currentCategory = useSelector((state) => state.currentCategory);
+  // const state = useSelector((state) => state);
+  const products = useSelector((state) => state.products);
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
@@ -39,10 +42,10 @@ function ProductList() {
 
   function filterProducts() {
     if (!currentCategory) {
-      return state.products;
+      return products;
     }
 
-    return state.products.filter(
+    return products.filter(
       (product) => product.category._id === currentCategory
     );
   }
@@ -50,7 +53,7 @@ function ProductList() {
   return (
     <div className="my-2">
       <h2>Our Products:</h2>
-      {state.products.length ? (
+      {products.length ? (
         <div className="flex-row">
           {filterProducts().map((product) => (
             <ProductItem
